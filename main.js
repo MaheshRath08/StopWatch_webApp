@@ -7,7 +7,7 @@ let startTime = 0
 let pastTime = 0
 let callEl
 let isPaused = true
-let mili = 0
+let milliseconds = 0
 let sec = 0
 let min = 0
 
@@ -41,17 +41,17 @@ reset.addEventListener("click", ()=>{
 function updateTime(){
     pastTime = Date.now() - startTime
     // mili = parseInt((pastTime % 1000) / 100)
-    mili = parseInt((pastTime%1000).toFixed(3))
+    milliseconds = parseInt((pastTime%1000).toFixed(3))
     sec = Math.floor((pastTime / 1000) % 60)
     min = Math.floor((pastTime / (1000*60)) % 60)
 
     sec = format(sec)
     min = format(min)
-    mili = mili.length == 2 ? "0"+mili : mili.length == 1 ? ("00"+mili) : mili
-
+    let mili = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds
     function format(e){
         return ("0"+e).length > 2 ? e : "0"+e
     }
+
 
     display.textContent = `${min}:${sec}:${mili}`
 }

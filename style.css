@@ -10,11 +10,16 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: rgb(18, 17, 29);
 }
 .display{
     font-size: 10rem;
     margin-bottom: 7rem;
     overflow: hidden;
+    font-family:monospace;
+    color: blue;
+    text-shadow: 0 0 7px blue;
+    cursor: pointer;
 }
 .btn-container{
     padding: 1.5rem;
@@ -22,7 +27,25 @@ body{
 }
 button{
     margin: 0 0.8rem;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 3rem;
     font-size: 1.5rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: blue;
+    border: none;
+    box-shadow: 0 0 6px 2px cyan;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 3px black;
+}
+button:hover{
+    background-color: black;
+    box-shadow: 0 0 8px 3px blue;
+    transform: scale(1.2);
+}
+button:active{
+    transform: scale(0.93);
+}
+.display:hover{
+    transform: scale(1.1);
 }
