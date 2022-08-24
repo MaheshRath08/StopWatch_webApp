@@ -14,6 +14,7 @@ body{
 .display{
     font-size: 10rem;
     margin-bottom: 7rem;
+    overflow: hidden;
 }
 .btn-container{
     padding: 1.5rem;

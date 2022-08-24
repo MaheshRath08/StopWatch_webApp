@@ -23,11 +23,12 @@ pause.addEventListener("click", ()=>{
     if(!isPaused){
         isPaused = true
         clearInterval(callEl)
-        pastTime = Date.now()
+        pastTime = Date.now() - startTime
     }
 })
 
 reset.addEventListener("click", ()=>{
+    clearInterval(callEl)
     mili = 0
     sec = 0
     min = 0
