@@ -15,7 +15,7 @@ start.addEventListener("click", ()=>{
     if(isPaused){
         isPaused = false
         startTime = Date.now() - pastTime
-        callEl = setInterval(updateTime, 70)
+        callEl = setInterval(updateTime, 50)
     }
 })
 
@@ -34,18 +34,19 @@ reset.addEventListener("click", ()=>{
     isPaused = true
     startTime = 0
     pastTime = 0
-    display.textContent = "00:00:00"
+    display.textContent = "00:00:000"
 })
 
 function updateTime(){
     pastTime = Date.now() - startTime
-    mili = parseInt((pastTime % 1000) / 100)
-    sec = Math.floor((duration / 1000) % 60)
-    min = Math.floor((duration / (1000*60)) % 60)
+    // mili = parseInt((pastTime % 1000) / 100)
+    mili = parseInt((pastTime%1000).toFixed(3))
+    sec = Math.floor((pastTime / 1000) % 60)
+    min = Math.floor((pastTime / (1000*60)) % 60)
 
-    mili = format(mili)
     sec = format(sec)
     min = format(min)
+    mili = mili.length == 2 ? "0"+mili : mili.length == 1 ? ("00"+mili) : mili
 
     function format(e){
         return ("0"+e).length > 2 ? e : "0"+e
