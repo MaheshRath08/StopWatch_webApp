@@ -18,7 +18,7 @@ body{
     overflow: hidden;
     font-family:monospace;
     color: blue;
-    text-shadow: 0 0 5px blue;
+    text-shadow: 0 2px 3px gold;
     cursor: pointer;
 }
 .btn-container{
@@ -48,5 +48,5 @@ button:active{
 }
 .display:hover{
     transform: scale(1.1);
-    text-shadow: 0 0 8px blue;
+    text-shadow: 0 2px 5px gold;
 }
