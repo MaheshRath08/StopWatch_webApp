@@ -33,15 +33,16 @@ button{
     background-color: black;
     color: blue;
     border: none;
-    box-shadow: 0 0 6px 2px cyan;
+    box-shadow: 0 0 6px 2px #00aeff;
     border-radius: 10px;
     cursor: pointer;
     text-shadow: 0 0 3px black;
 }
 button:hover{
     background-color: black;
-    box-shadow: 0 0 9px 3px blue;
-    transform: scale(1.2);
+    box-shadow: 0 0 6px 3px blue;
+    transform: scale(1.05);
+    color: #00aeff;
 }
 button:active{
     transform: scale(0.93);
